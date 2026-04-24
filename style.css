@@ -1,0 +1,28 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login, .main {
+  width: 95%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+img {
+  width: 100%;
+  margin-top: 10px;
+}
