@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Grade Analyzer</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- OCR LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@2/dist/tesseract.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="login" id="loginPage">
+  <h2>🎓 Login</h2>
+  <input type="text" id="name" placeholder="Enter Name">
+  <input type="password" id="password" placeholder="Create Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="main" id="mainPage" style="display:none;">
+
+  <div class="profile">
+    <h2 id="studentName"></h2>
+    <input id="usn" placeholder="USN">
+    <input id="dept" placeholder="Department">
+    <input id="degree" placeholder="Degree">
+  </div>
+
+  <!-- IMAGE -->
+  <input type="file" accept="image/*" onchange="loadImage(event)">
+  <img id="preview">
+
+  <!-- AUTO BUTTON -->
+  <button onclick="autoFill()">🤖 Auto Fill from Image</button>
+
+  <!-- TABLE -->
+  <table id="subjectTable">
+    <tr>
+      <th>Subject</th>
+      <th>Total</th>
+      <th>Credits</th>
+    </tr>
+  </table>
+
+  <button onclick="addSubject()">+ Add Subject</button>
+  <button onclick="calculateSGPA()">Calculate SGPA</button>
+
+  <h3 id="sgpaResult"></h3>
+
+  <input id="prevCgpa" placeholder="Previous CGPA">
+  <input id="prevSem" placeholder="Semesters">
+
+  <button onclick="calculateCGPA()">Calculate CGPA</button>
+  <h3 id="cgpaResult"></h3>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
